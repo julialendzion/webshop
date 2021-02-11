@@ -81,7 +81,15 @@ select {
 }
 
 /*PRODUCT LIST*/
-
+.productList article .discounted {
+  display: none;
+}
+.productList article .przecena {
+  display: none;
+}
+.productList article .sprzedane {
+  display: none;
+}
 .productList main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
@@ -94,10 +102,15 @@ select {
   text-decoration: line-through;
 }
 
-.discounted {
+.productList article.onSale span {
+  display: none;
+}
+
+.productList article.onSale .discounted {
   margin-top: -2vw;
   display: flex;
   justify-content: space-between;
+  width: 250px;
 }
 
 .soldOut img {
@@ -105,7 +118,10 @@ select {
 }
 .sprzedane p {
   position: absolute;
-  margin: 0;
+  margin-top: -390px;
+  margin-left: 220px;
+  font-size: 1.2em;
+  transform: rotate(20deg);
 }
 .przecena {
   padding: 0;
@@ -116,7 +132,12 @@ select {
   padding: 0;
   margin: 0;
 }
-
+.productList article.onSale .przecena {
+  display: inline;
+}
+.productList article.soldOut .sprzedane {
+  display: inline;
+}
 /*CATEGORIES*/
 
 .categoryList ol {
