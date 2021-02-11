@@ -55,6 +55,10 @@ function showProduct(product) {
   ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
   copy.querySelector("article img").alt = product.productdisplayname;
 
+  copy.querySelector(
+    "article .przecena p"
+  ).textContent = ` -${product.discount}%`;
+
   //grab parent
   const parent = document.querySelector("main");
   //append
