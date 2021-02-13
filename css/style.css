@@ -3,6 +3,11 @@
 html {
   background-color: #eeeae8;
 }
+main {
+  align-content: center;
+  justify-content: center;
+  font-family: "Nunito Sans", sans-serif;
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -19,9 +24,17 @@ header a {
 }
 
 /*PRODUCT PAGE*/
+
+dd {
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+.product main {
+  margin: 20px;
+}
 .breadcrumbs a {
   font-family: "Nunito Sans", sans-serif;
-  font-size: 1.2vw;
+  font-size: 1em;
   color: black;
   text-decoration: none;
 }
@@ -49,12 +62,18 @@ button {
   display: block;
   padding: 0.5rem 1.25rem;
   font-size: 1rem;
-  background-color: #7796b5;
+  color: #171b36;
+  background-color: #eeeae8;
+  font-size: 1.1em;
+  box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.1);
   font-family: "Nunito Sans", sans-serif;
   text-decoration: none;
   margin-top: 1rem;
   cursor: pointer;
   border: 0;
+}
+button:hover {
+  transform: scale(1.1);
 }
 
 select {
@@ -166,7 +185,7 @@ article a:visited {
   font-size: 1.2em;
 }
 article a:hover {
-  background-color: #77778f;
+  background-color: white;
 }
 article a:active {
   text-align: center;

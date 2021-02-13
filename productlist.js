@@ -46,9 +46,9 @@ function showProduct(product) {
     copy.querySelector(
       ".discounted .price"
     ).textContent = `DKK ${product.price} ,- `;
-    copy.querySelector(
-      ".discounted .newprice"
-    ).textContent = `DKK ${product.price} ,- `;
+    copy.querySelector(".discounted .newprice").textContent = `DKK ${
+      product.price - (product.discount / 100) * product.price
+    } ,- `;
   }
   copy.querySelector(
     "article img"
